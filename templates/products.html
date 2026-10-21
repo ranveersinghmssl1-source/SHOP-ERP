@@ -1,21 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
 <h2>Product Master</h2>
 
 <form method="POST" action="/add_product">
 
-<input name="product_code" placeholder="Code">
+<div class="row">
 
-<input name="product_name" placeholder="Product Name">
+<div class="col-md-2">
+<input class="form-control"
+name="product_code"
+placeholder="Code">
+</div>
 
-<input name="category" placeholder="Category">
+<div class="col-md-3">
+<input class="form-control"
+name="product_name"
+placeholder="Product Name">
+</div>
 
-<input name="purchase_price" placeholder="Purchase">
+<div class="col-md-2">
+<input class="form-control"
+name="category"
+placeholder="Category">
+</div>
 
-<input name="sale_price" placeholder="Sale">
+<div class="col-md-2">
+<input class="form-control"
+name="purchase_price"
+placeholder="Purchase">
+</div>
 
-<input name="stock_qty" placeholder="Stock">
+<div class="col-md-2">
+<input class="form-control"
+name="sale_price"
+placeholder="Sale">
+</div>
 
-<input name="min_stock" placeholder="Min Stock">
+</div>
 
-<button type="submit">Save</button>
+<br>
+
+<button class="btn btn-success">
+Save Product
+</button>
 
 </form>
+
+{% endblock %}
