@@ -1,19 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>SHOP ERP</title>
-</head>
-<body>
+{% extends 'layout.html' %}
 
-<h1>SHOP ERP DASHBOARD</h1>
+{% block content %}
 
-<h3>Total Products : {{ product_count }}</h3>
-<h3>Total Customers : {{ customer_count }}</h3>
-<h3>Total Suppliers : {{ supplier_count }}</h3>
+<h2>Dashboard</h2>
 
-<a href="/products">Products</a> |
-<a href="/customers">Customers</a> |
-<a href="/suppliers">Suppliers</a>
+<div class="row">
 
-</body>
-</html>
+    <div class="col-md-4">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h3>{{ product_count }}</h3>
+                <p>Total Products</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h3>{{ customer_count }}</h3>
+                <p>Total Customers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-warning text-dark">
+            <div class="card-body">
+                <h3>{{ supplier_count }}</h3>
+                <p>Total Suppliers</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+<a href="/products" class="btn btn-primary">
+    Products
+</a>
+
+<a href="/customers" class="btn btn-success">
+    Customers
+</a>
+
+<a href="/suppliers" class="btn btn-warning">
+    Suppliers
+</a>
+
+{% endblock %}
